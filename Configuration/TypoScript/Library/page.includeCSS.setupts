@@ -1,0 +1,39 @@
+page {
+    includeCSS {
+        bootstrap = EXT:theme_core/Resources/Public/temp/bootstrap.less
+        bootstrap {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+        components = EXT:theme_core/Resources/Public/temp/components.css
+        components {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+        maincss = EXT:theme_core/Resources/Public/temp/main.less
+        maincss {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+    }
+# includeCSS {
+ #        bootstrap = EXT:theme_core/Resources/Private/Dyncss/bootstrap.less
+ #        bootstrap {
+ #            excludeFromConcatenation = 1
+ #            disableCompression = 1
+ #        }
+ #        components = EXT:theme_core/Resources/Private/Dyncss/components.less
+ #        components {
+ #            excludeFromConcatenation = 1
+ #            disableCompression = 1
+ #        }
+	# 	maincss = EXT:theme_core/Resources/Private/Dyncss/maincss.less
+ #        maincss {
+ #            excludeFromConcatenation = 1
+ #            disableCompression = 1
+ #        }
+	# }
+}
+
+[globalVar = LIT:1 = {$themes.mode.isProduction}]
+[global]

@@ -1,0 +1,24 @@
+# Name and description of the theme (required)
+title            : Pixelant CORE theme
+version          : 0.0.1
+description      :  |
+  Pixelant CORE Theme template -
+  This theme have two ways how to manipulate with settings. One standard for TYPO3 themes and second real time intuitive interface to change settings. You can try it in this link: http://dmh.github.io/theme_core_site_test/
+
+# Keywords (optional)
+keywords:
+  - core_theme
+  - TYPO3 Theme
+  - Pixelant
+  - CORE
+  - responsive design
+
+# Constants categories which are used for constants in this theme
+constants:
+  availableCategories: [theme,colors,font,meta,pages,container,slider]
+
+# Screenshots for the preview gallery (optional, multiple possible)
+screenshots:
+  -
+    file           : EXT:theme_core/Meta/Screenshots/screenshot.png
+    caption        : Pixelant CORE

@@ -1,0 +1,36 @@
+# Settings for the development system
+
+page {
+	includeJSFooter {
+		jquery = EXT:theme_core/Resources/Public/temp/jquery.js
+		jquery {
+			external = 0
+			disableCompression = 1
+			excludeFromConcatenation = 1
+		}
+		bootstrap = EXT:theme_core/Resources/Public/temp/bootstrap.js
+		bootstrap {
+			external = 0
+			disableCompression = 1
+			excludeFromConcatenation = 1
+		}
+		components = EXT:theme_core/Resources/Public/temp/components.js
+		components {
+			external = 0
+			disableCompression = 1
+			excludeFromConcatenation = 1
+		}
+		mainjs = EXT:theme_core/Resources/Public/temp/main.js
+		mainjs {
+			external = 0
+			disableCompression = 1
+			excludeFromConcatenation = 1
+		}
+	}
+}
+
+
+# Settings for the production system
+[globalVar = LIT:1 = {$themes.mode.isProduction}]
+
+[global]
