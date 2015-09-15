@@ -1,0 +1,6 @@
+tt_content.contentElementSlider = FLUIDTEMPLATE
+tt_content.contentElementSlider {
+  template = FILE
+  template.file = EXT:theme_core/Resources/Private/Templates/ContentELements/Slider.html
+  layoutRootPath = EXT:theme_core/Resources/Private/Templates/Layout/
+}

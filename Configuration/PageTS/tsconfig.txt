@@ -1,5 +1,5 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_core/Configuration/BackendLayouts" extensions="pagets">
-
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_core/Configuration/ContentElements" extensions="pagets">
 
 # Just delete the backendlayouts which arn't required
 #
@@ -22,9 +22,3 @@
 #backendlayouts.TopContentMenuContent >
 #backendlayouts.TopContentMenuContentSidebar >
 #backendlayouts.TopContentSidebarContent >
-
-
-
-
-
-

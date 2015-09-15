@@ -1,0 +1,26 @@
+tt_content.contentElementSlider = FLUIDTEMPLATE
+tt_content.contentElementSlider {
+    templateName = Slider
+    layoutRootPaths {
+        10 = EXT:theme_core/Resources/Private/Layouts/ContentElements
+    }
+    partialRootPaths {
+        10 = EXT:theme_core/Resources/Private/Partials/ContentElements
+    }
+    templateRootPaths {
+        10 = EXT:theme_core/Resources/Private/Templates/ContentElements
+    }
+    dataProcessing {
+
+        # Process files
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            as = sliderImages
+        }
+    }
+    settings {
+        defaultWidth = 1280
+        defaultHeight = 405
+    }
+}
