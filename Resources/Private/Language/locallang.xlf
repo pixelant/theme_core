@@ -110,7 +110,10 @@
 			<trans-unit id="content.pricing_table_listheader" xml:space="preserve">
 				<source>List header</source>
 			</trans-unit>
-
+            <!-- ContentElements labels -->
+            <trans-unit id="contentElement.slider.linkText" xml:space="preserve">
+                <source>Read more</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

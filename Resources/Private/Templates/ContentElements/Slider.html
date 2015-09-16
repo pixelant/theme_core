@@ -1,39 +1,50 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
     <f:layout name="Default" />
 
     <f:debug>{image}</f:debug>
     <f:debug>{_all}</f:debug>
+    <f:debug>{image.properties}</f:debug>
+    <f:debug>{image.referenceProperties}</f:debug>
 
     <f:section name="Default">
     <!-- theme_core: Templates/ContentElements/Slider.html [begin] -->
     <f:if condition="{sliderImages}">
-        <!-- Swiper -->
         <div class="img-slider swiper-container js__img-slider">
             <div class="swiper-wrapper img-slider__wrp">
                 <f:for each="{sliderImages}" as="image">
+
                     <div class="swiper-slide img-slider__slide">
                         <div class="img-slider__slide-wrp">
                             <img data-src="<f:uri.image src="{image.uid}" width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}" height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}" treatIdAsReference="1" />" class="swiper-lazy img-responsive img-slider__img">
                             <div class="swiper-lazy-preloader"></div>
                             <div class="img-slider__caption">
-                                <h3 class="img-slider__caption-sub-header">{image.alternative}</h3>
-                                <h2 class="img-slider__caption-header">{image.title}</h2>
-                                <p class="img-slider__caption-p js__img-slider__caption-p">{image.description}</p>
-                                <f:if condition="{image.link}">
-                                    <f:link.typolink parameter="{image.link}" class="img-slider__caption-link">Call to action</f:link.typolink>
+                                <f:if condition="{image.referenceProperties.alternative}">
+                                    <h3 class="img-slider__caption-sub-header">{image.referenceProperties.alternative}</h3>
+                                </f:if>
+                                <f:if condition="{image.referenceProperties.title}">
+                                    <h2 class="img-slider__caption-header">{image.referenceProperties.title}</h2>
+                                </f:if>
+                                <f:if condition="{image.referenceProperties.description}">
+                                    <p class="img-slider__caption-p js__img-slider__caption-p">{image.referenceProperties.description}</p>
+                                </f:if>
+                                <f:if condition="{image.referenceProperties.link}">
+                                    <f:link.typolink parameter="{image.referenceProperties.link}" class="img-slider__caption-link"><f:translate key="contentElement.slider.linkText" extensionName="theme_core" /></f:link.typolink>
                                 </f:if>
                             </div>
                         </div>
                     </div>
-                    <f:comment>{image.uid}<br />{image.title}<br />{image.alternative}<br />{image.description}<br />{image.link}<br /></f:comment>
                 </f:for>
             </div>
-            <!-- Add Pagination -->
-            <div class="js__img-slider__pagination img-slider__pagination swiper-pagination swiper-pagination-white img-slider__pagination"></div>
-            <!-- Navigation -->
-            <div class="js__img-slider__btn-next img-slider__btn-next swiper-button-next swiper-button-white"></div>
-            <div class="js__img-slider__btn-prev img-slider__btn-prev swiper-button-prev swiper-button-white"></div>
+            <f:comment><!-- If there are more than one image --></f:comment>
+            <f:if condition="{sliderImages->f:count()} > 1">
+                <f:comment><!-- Add Pagination --></f:comment>
+                <div class="js__img-slider__pagination img-slider__pagination swiper-pagination swiper-pagination-white img-slider__pagination"></div>
+                <f:comment><!-- Navigation --></f:comment>
+                <div class="js__img-slider__btn-next img-slider__btn-next swiper-button-next swiper-button-white"></div>
+                <div class="js__img-slider__btn-prev img-slider__btn-prev swiper-button-prev swiper-button-white"></div>
+            </f:if>
         </div>
     </f:if>
     <!-- theme_core: Templates/ContentElements/Slider.html [end] -->
