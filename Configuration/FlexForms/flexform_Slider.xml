@@ -1,0 +1,26 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.flexform.sheetGeneral</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <wrapperClass>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.flexform.wrapperClass</label>
+                            <config>
+                                <type>select</type>
+                                <items></items>
+                            </config>
+                        </TCEforms>
+                    </wrapperClass>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

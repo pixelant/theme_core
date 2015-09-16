@@ -4,16 +4,17 @@
     <f:layout name="Default" />
 
     <f:debug>{image}</f:debug>
-    <f:debug>{_all}</f:debug>
     <f:debug>{image.properties}</f:debug>
     <f:debug>{image.referenceProperties}</f:debug>
 
     <f:section name="Default">
     <!-- theme_core: Templates/ContentElements/Slider.html [begin] -->
-    <f:if condition="{sliderImages}">
-        <div class="img-slider swiper-container js__img-slider">
+    <f:debug>{_all}</f:debug>
+
+    <f:if condition="{slides}">
+        <div class="img-slider swiper-container js__img-slider {f:if(condition: settings.wrapperClass, then: settings.wrapperClass, else: '')}">
             <div class="swiper-wrapper img-slider__wrp">
-                <f:for each="{sliderImages}" as="image">
+                <f:for each="{slides}" as="image">
 
                     <div class="swiper-slide img-slider__slide">
                         <div class="img-slider__slide-wrp">
@@ -38,7 +39,7 @@
                 </f:for>
             </div>
             <f:comment><!-- If there are more than one image --></f:comment>
-            <f:if condition="{sliderImages->f:count()} > 1">
+            <f:if condition="{slides->f:count()} > 1">
                 <f:comment><!-- Add Pagination --></f:comment>
                 <div class="js__img-slider__pagination img-slider__pagination swiper-pagination swiper-pagination-white img-slider__pagination"></div>
                 <f:comment><!-- Navigation --></f:comment>

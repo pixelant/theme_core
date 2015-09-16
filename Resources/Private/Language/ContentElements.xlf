@@ -12,6 +12,15 @@
             <trans-unit id="slider.description">
                 <source>Slider Description</source>
             </trans-unit>
+            <trans-unit id="slider.flexform.sheetGeneral">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.wrapperClass">
+                <source>Wrapper Class</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.wrapperClass_none">
+                <source>None</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

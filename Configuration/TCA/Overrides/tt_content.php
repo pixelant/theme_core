@@ -10,6 +10,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['contentElementSlider'] = array(
 $GLOBALS['TCA']['tt_content']['types']['contentElementSlider'] = array(
     'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,
+               --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.plugin,pi_flexform,
                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,
                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
@@ -19,11 +20,13 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider'] = array(
                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended'
 );
-
+// --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.plugin,pi_flexform,--div--;
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
   'LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.title',
   'contentElementSlider',
   'EXT:theme_core/Resources/Public/Icons/ContentElements/slider.gif'
 );
+
+$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_Slider.xml';
 
 ?>

@@ -16,7 +16,12 @@ tt_content.contentElementSlider {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
         10 {
             references.fieldName = image
-            as = sliderImages
+            as = slides
+        }
+        20 = Pixelant\ThemeCore\DataProcessing\FlexFormProcessor
+        20 {
+            fieldName = pi_flexform
+            as = settings
         }
     }
     settings {
