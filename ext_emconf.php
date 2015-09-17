@@ -39,6 +39,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'themes' => '2.4.4-2.5.99',
 			'dyncss' => '0.7.0-0.7.99',
 			'dyncss_less' => '0.7.0-0.7.99',
+			'extension_tools' => '0.0.0-0.0.0'
 		),
 		'conflicts' => array(
 		),

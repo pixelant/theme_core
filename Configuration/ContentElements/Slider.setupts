@@ -18,7 +18,7 @@ tt_content.contentElementSlider {
             references.fieldName = image
             as = slides
         }
-        20 = Pixelant\ThemeCore\DataProcessing\FlexFormProcessor
+        20 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
         20 {
             fieldName = pi_flexform
             as = settings
