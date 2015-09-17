@@ -12,6 +12,12 @@
             <trans-unit id="slider.description">
                 <source>Slider Description</source>
             </trans-unit>
+            <trans-unit id="slider.tabs.slides">
+                <source>Slides</source>
+            </trans-unit>
+            <trans-unit id="slider.tabs.settings">
+                <source>Settings</source>
+            </trans-unit>
             <trans-unit id="slider.flexform.sheetGeneral">
                 <source>Settings</source>
             </trans-unit>
