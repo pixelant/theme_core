@@ -1,0 +1,37 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.sheetGeneral</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <iconClass>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.iconClass</label>
+                            <config>
+                                <type>user</type>
+                                <userFunc>Pixelant\ExtensionTools\UserFunction\IconFontSelector->renderField</userFunc>
+                                <cssFile>EXT:theme_core/Resources/Public/temp/fonts/style.css</cssFile>
+                                <isIcoMoon>1</isIcoMoon>
+                            </config>
+                        </TCEforms>
+                    </iconClass>
+                    <wrapperClass>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.wrapperClass</label>
+                            <config>
+                                <type>select</type>
+                                <items></items>
+                            </config>
+                        </TCEforms>
+                    </wrapperClass>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,19 @@
+tt_content.bigIconTextButton = FLUIDTEMPLATE
+tt_content.bigIconTextButton {
+    templateName = bigIconTextButton
+    layoutRootPaths {
+        10 = EXT:theme_core/Resources/Private/Layouts/ContentElements
+    }
+    partialRootPaths {
+        10 = EXT:theme_core/Resources/Private/Partials/ContentElements
+    }
+    templateRootPaths {
+        10 = EXT:theme_core/Resources/Private/Templates/ContentElements
+    }
+    dataProcessing {
+        20 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
+        20 {
+            as = settings
+        }
+    }
+}

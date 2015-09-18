@@ -34,6 +34,29 @@ $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
   'EXT:theme_core/Resources/Public/Icons/ContentElements/slider.gif'
 );
 
-$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_Slider.xml';
+$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_slider.xml';
 
+// Content Element bigIconTextButton
+$GLOBALS['TCA']['tt_content']['palettes']['bigIconTextButton'] = array(
+  'showitem' => 'header;LLL:EXT:cms/locallang_ttc.xlf:header_formlabel,
+         --linebreak--,bodytext;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.bodytext,
+         --linebreak--,subheader;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.buttonText,
+         --linebreak--,header_link;LLL:EXT:cms/locallang_ttc.xlf:header_link_formlabel,
+         --linebreak--,pi_flexform;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.tabs.settings',
+
+  'canNotCollapse' => 1
+);
+
+$GLOBALS['TCA']['tt_content']['types']['bigIconTextButton'] = array(
+    'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;bigIconTextButton,'
+);
+
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
+  'LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.title',
+  'bigIconTextButton',
+  'EXT:theme_core/Resources/Public/Icons/ContentElements/bigIconTextButton.gif'
+);
+
+$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,bigIconTextButton'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_bigIconTextButton.xml';
 ?>

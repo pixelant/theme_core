@@ -27,6 +27,35 @@
             <trans-unit id="slider.flexform.wrapperClass_none">
                 <source>None</source>
             </trans-unit>
+
+            <trans-unit id="bigIconTextButton.title">
+                <source>bigIconTextButton Title</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.description">
+                <source>bigIconTextButton Description</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.buttonText">
+                <source>Button text</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.iconClass">
+                <source>Icon</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.wrapperClass">
+                <source>Modifier</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.wrapperClass_none">
+                <source>None</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
