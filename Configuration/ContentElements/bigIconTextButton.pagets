@@ -14,23 +14,23 @@ mod.wizards.newContentElement.wizardItems.contentElements {
 
 TCEFORM.tt_content.pi_flexform.bigIconTextButton.sDEF.iconClass {
     addItems {
-        0 = LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.flexform.iconClass_none
+        0 = LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.iconClass_none
     }
 }
 
 TCEFORM.tt_content.pi_flexform.bigIconTextButton.sDEF.wrapperClass {
     addItems {
-        0 = LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.flexform.wrapperClass_none
+        0 = LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.wrapperClass_none
     }
 }
 
 ############################################################################################
 ### Example of how to add custom "modifiers" to flexform select wrapperClass with pagets ###
 ############################################################################################
-#TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.wrapperClass {
+#TCEFORM.tt_content.pi_flexform.bigIconTextButton.sDEF.wrapperClass {
 #    addItems {
 #        __css-modifier-class-1 = LLL:fileadmin/ContentElements.xlf:slider.flexform.wrapperClass_css-modifier-class-1
 #        __css-modifier-class-2 = LLL:fileadmin/ContentElements.xlf:slider.flexform.wrapperClass_css-modifier-class-2
-#        __css-modifier-class-3 = Special för att få annorlunda rubriker
+#        __css-modifier-class-3 = Special modifier class description
 #    }
 #}

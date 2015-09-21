@@ -7,10 +7,10 @@
                 <source>Content elements</source>
             </trans-unit>
             <trans-unit id="slider.title">
-                <source>Slider Title</source>
+                <source>Slider</source>
             </trans-unit>
             <trans-unit id="slider.description">
-                <source>Slider Description</source>
+                <source>Slider with images and optional texts and link</source>
             </trans-unit>
             <trans-unit id="slider.tabs.slides">
                 <source>Slides</source>
@@ -19,20 +19,20 @@
                 <source>Settings</source>
             </trans-unit>
             <trans-unit id="slider.flexform.sheetGeneral">
-                <source>Settings</source>
+                <source>Additional settings</source>
             </trans-unit>
             <trans-unit id="slider.flexform.wrapperClass">
-                <source>Wrapper Class</source>
+                <source>Modifier</source>
             </trans-unit>
             <trans-unit id="slider.flexform.wrapperClass_none">
                 <source>None</source>
             </trans-unit>
 
             <trans-unit id="bigIconTextButton.title">
-                <source>bigIconTextButton Title</source>
+                <source>Icon,Text and Link</source>
             </trans-unit>
             <trans-unit id="bigIconTextButton.description">
-                <source>bigIconTextButton Description</source>
+                <source>Big icon, header, text and link</source>
             </trans-unit>
             <trans-unit id="bigIconTextButton.buttonText">
                 <source>Button text</source>
