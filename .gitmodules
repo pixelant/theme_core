@@ -1,0 +1,3 @@
+[submodule "Resources/Public/temp"]
+	path = Resources/Public/temp
+	url = https://github.com/dmh/theme_core_site_test
