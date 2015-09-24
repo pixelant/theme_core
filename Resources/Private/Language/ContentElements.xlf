@@ -56,6 +56,39 @@
                 <source>None</source>
             </trans-unit>
 
+            <trans-unit id="accordion.title">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="accordion.description">
+                <source>Accordion, added records will be used as "accordion", and the record inside "accordian" will be rendered as content.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.wrapperClass">
+                <source>Modifier</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.wrapperClass_none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode">
+                <source>Accordion mode</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenSingleSelect">
+                <source>First item is expanded at load, only one item can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allClosedMultiSelect">
+                <source>All items are collapsed at load, multiple items can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allClosedSingleSelect">
+                <source>All items are collapsed at load, only one item can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenMultiSelect">
+                <source>First item is expanded at load, multiple items can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allOpen">
+                <source>All items are expanded at load.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

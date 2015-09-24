@@ -1,0 +1,27 @@
+tt_content.accordion = FLUIDTEMPLATE
+tt_content.accordion {
+    templateName = Accordion
+    layoutRootPaths {
+        10 = EXT:theme_core/Resources/Private/Layouts/ContentElements
+    }
+    partialRootPaths {
+        10 = EXT:theme_core/Resources/Private/Partials/ContentElements
+    }
+    templateRootPaths {
+        10 = EXT:theme_core/Resources/Private/Templates/ContentElements
+    }
+
+    dataProcessing {
+
+        20 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
+        20 {
+            fieldName = pi_flexform
+            as = settings
+        }
+        30 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
+        30 {
+            fieldName = pi_flexform
+            as = testing
+        }
+    }
+}

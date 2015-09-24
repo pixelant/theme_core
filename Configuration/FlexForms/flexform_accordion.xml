@@ -1,0 +1,37 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:accordion.flexform.sheetGeneral</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <wrapperClass>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:accordion.flexform.wrapperClass</label>
+                            <config>
+                                <type>select</type>
+                                <items></items>
+                            </config>
+                        </TCEforms>
+                    </wrapperClass>
+                    <accordionMode>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:accordion.flexform.accordionMode</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </accordionMode>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
