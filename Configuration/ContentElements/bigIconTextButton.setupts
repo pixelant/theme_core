@@ -1,6 +1,6 @@
 tt_content.bigIconTextButton = FLUIDTEMPLATE
 tt_content.bigIconTextButton {
-    templateName = bigIconTextButton
+    templateName = BigIconTextButton
     layoutRootPaths {
         10 = EXT:theme_core/Resources/Private/Layouts/ContentElements
     }
