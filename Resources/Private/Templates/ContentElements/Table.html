@@ -1,0 +1,70 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="HeaderContentFooter" />
+
+<f:section name="content">
+    <f:if condition="{table}">
+        <table class="ce-table table {f:render(section: 'tableLayout.{data.layout}', optional: 1)}">
+            <f:if condition="{data.table_caption}">
+                <caption>{data.table_caption}</caption>
+            </f:if>
+            <f:for each="{table}" as="row" iteration="rowIterator">
+
+                <f:if condition="{rowIterator.isFirst}">
+                    <f:then>
+                        <f:if condition="{data.table_header_position} == 1">
+                            <f:then>
+                                <thead>
+                            </f:then>
+                            <f:else>
+                                <tbody>
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{rowIterator.isLast}">
+                            <f:if condition="{data.table_tfoot}">
+                                </tbody>
+                                <tfoot>
+                            </f:if>
+                        </f:if>
+                    </f:else>
+                </f:if>
+
+                <tr>
+                    <f:for each="{row}" as="cell" iteration="columnIterator">
+                        <f:render partial="Table/Columns" arguments="{_all}" />
+                    </f:for>
+                </tr>
+
+                <f:if condition="{rowIterator.isFirst}">
+                    <f:then>
+                        <f:if condition="{data.table_header_position} == 1">
+                            </thead>
+                            <tbody>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{rowIterator.isLast}">
+                            <f:if condition="{data.table_tfoot}">
+                                <f:then>
+                                    </tfoot>
+                                </f:then>
+                                <f:else>
+                                    </tbody>
+                                </f:else>
+                            </f:if>
+                        </f:if>
+                    </f:else>
+                </f:if>
+
+            </f:for>
+        </table>
+    </f:if>
+</f:section>
+
+<f:section name="tableLayout.1">table table-striped</f:section>
+<f:section name="tableLayout.2">table table-striped table-bordered</f:section>
+<f:section name="tableLayout.3">table table-striped table-bordered table-condensed</f:section>
+<f:section name="tableLayout.4">table table-bordered table-condensed table-hover</f:section>
+
+</html>
