@@ -1,31 +1,25 @@
-tt_content.contentElementSlider = FLUIDTEMPLATE
-tt_content.contentElementSlider {
-    templateName = Slider
-    layoutRootPaths {
-        10 = EXT:theme_core/Resources/Private/Layouts/ContentElements
-    }
-    partialRootPaths {
-        10 = EXT:theme_core/Resources/Private/Partials/ContentElements
-    }
-    templateRootPaths {
-        10 = EXT:theme_core/Resources/Private/Templates/ContentElements
-    }
-    dataProcessing {
+tt_content {
+    contentElementSlider =< lib.fluidContent
+    contentElementSlider {
+        templateName = Slider
 
-        # Process files
-        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-        10 {
-            references.fieldName = image
-            as = slides
+        dataProcessing {
+
+            # Process files
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = image
+                as = slides
+            }
+            20 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
+            20 {
+                fieldName = pi_flexform
+                as = settings
+            }
         }
-        20 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
-        20 {
-            fieldName = pi_flexform
-            as = settings
+        settings {
+            defaultWidth = 1280
+            defaultHeight = 405
         }
-    }
-    settings {
-        defaultWidth = 1280
-        defaultHeight = 405
     }
 }

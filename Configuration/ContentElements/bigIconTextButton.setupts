@@ -1,19 +1,15 @@
-tt_content.bigIconTextButton = FLUIDTEMPLATE
-tt_content.bigIconTextButton {
-    templateName = BigIconTextButton
-    layoutRootPaths {
-        10 = EXT:theme_core/Resources/Private/Layouts/ContentElements
-    }
-    partialRootPaths {
-        10 = EXT:theme_core/Resources/Private/Partials/ContentElements
-    }
-    templateRootPaths {
-        10 = EXT:theme_core/Resources/Private/Templates/ContentElements
-    }
-    dataProcessing {
-        20 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
-        20 {
-            as = settings
+tt_content {
+    bigIconTextButton =< lib.fluidContent
+    bigIconTextButton {
+        templateName = BigIconTextButton
+
+        dataProcessing {
+
+            10 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
+            10 {
+                fieldName = pi_flexform
+                as = settings
+            }
         }
     }
 }
