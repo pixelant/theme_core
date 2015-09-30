@@ -16,6 +16,12 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
+            30 = Pixelant\ExtensionTools\DataProcessing\LayoutClassProcessor
+            30 {
+                classMappings {
+                    0 =
+                }
+            }
         }
         settings {
             defaultWidth = 1280

@@ -21,15 +21,6 @@
                             </config>
                         </TCEforms>
                     </iconClass>
-                    <wrapperClass>
-                        <TCEforms>
-                            <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.wrapperClass</label>
-                            <config>
-                                <type>select</type>
-                                <items></items>
-                            </config>
-                        </TCEforms>
-                    </wrapperClass>
                 </el>
             </ROOT>
         </sDEF>

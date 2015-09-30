@@ -12,19 +12,15 @@ mod.wizards.newContentElement.wizardItems.contentElements {
     show := addToList(slider)
 }
 
-TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.wrapperClass {
-    addItems {
-        0 = LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.flexform.wrapperClass_none
+# Use layout field to customize Layout select-box on contentElementSlider
+TCEFORM.tt_content.layout {
+    types {
+        contentElementSlider {
+            # Based on that the default items still exists.
+            removeItems = 1,2,3
+            altLabels {
+                0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
+            }
+        }
     }
 }
-
-############################################################################################
-### Example of how to add custom "modifiers" to flexform select wrapperClass with pagets ###
-############################################################################################
-#TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.wrapperClass {
-#    addItems {
-#        __css-modifier-class-1 = LLL:fileadmin/ContentElements.xlf:slider.flexform.wrapperClass_css-modifier-class-1
-#        __css-modifier-class-2 = LLL:fileadmin/ContentElements.xlf:slider.flexform.wrapperClass_css-modifier-class-2
-#        __css-modifier-class-3 = Special för att få annorlunda rubriker
-#    }
-#}

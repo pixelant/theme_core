@@ -10,6 +10,13 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
+
+            1910 = Pixelant\ExtensionTools\DataProcessing\LayoutClassProcessor
+            1910 {
+                classMappings {
+                    0 =
+                }
+            }
         }
     }
 }

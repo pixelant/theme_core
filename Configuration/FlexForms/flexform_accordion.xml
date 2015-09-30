@@ -10,15 +10,6 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <wrapperClass>
-                        <TCEforms>
-                            <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:accordion.flexform.wrapperClass</label>
-                            <config>
-                                <type>select</type>
-                                <items></items>
-                            </config>
-                        </TCEforms>
-                    </wrapperClass>
                     <accordionMode>
                         <TCEforms>
                             <label>LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:accordion.flexform.accordionMode</label>

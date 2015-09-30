@@ -1,18 +1,18 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-    <f:layout name="Default" />
+    <f:layout name="ContentFooter" />
 
     <f:debug>{image}</f:debug>
     <f:debug>{image.properties}</f:debug>
     <f:debug>{image.referenceProperties}</f:debug>
     <f:debug>{_all}</f:debug>
 
-    <f:section name="Default">
+    <f:section name="content">
     <!-- theme_core: Templates/ContentElements/Slider.html [begin] -->
 
     <f:if condition="{slides}">
-        <div class="img-slider swiper-container js__img-slider {f:if(condition: settings.wrapperClass, then: settings.wrapperClass, else: '')}">
+        <div class="img-slider swiper-container js__img-slider {layoutClass}">
             <div class="swiper-wrapper img-slider__wrp">
                 <f:for each="{slides}" as="image">
 

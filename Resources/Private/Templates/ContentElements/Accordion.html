@@ -1,14 +1,13 @@
 {namespace xtools=Pixelant\ExtensionTools\ViewHelpers}
 
-<f:layout name="ContentFooter" />
+<f:layout name="HeaderContentFooter" />
 
 <f:debug>{_all}</f:debug>
 
 <f:section name="content">
-    <!-- theme_core: Templates/ContentElements/Accordion.html [begin] -->
-<f:debug title="settings">{settings}</f:debug>
+<!-- theme_core: Templates/ContentElements/Accordion.html [begin] -->
     <f:if condition="{data.records}">
-        <div class="{f:if(condition: settings.wrapperClass, then: settings.wrapperClass, else: '')}">
+        <div class="{layoutClass}">
             <div class="panel-group" id="accordion-{data.uid}" role="tablist" aria-multiselectable="{f:if(condition: '{settings.accordionMode} >= 2', then: 'TRUE', else: 'FALSE')}">
                 <f:for each="{xtools:get.records(recordList : data.records)}" as="accordion" iteration="accordionIteration">
                     <div class="panel panel-default">
