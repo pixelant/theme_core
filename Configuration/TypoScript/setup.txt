@@ -7,15 +7,20 @@
 lib.fluidContent {
     templateRootPaths {
         1910 =  EXT:theme_core/Resources/Private/Templates/ContentElements
+        1911 =  EXT:theme_core/Resources/Private/Templates/FluidStyledContent
     }
     partialRootPaths {
         1910 =  EXT:theme_core/Resources/Private/Partials/ContentElements
+        1911 =  EXT:theme_core/Resources/Private/Partials/FluidStyledContent
     }
     layoutRootPaths {
         1910 =  EXT:theme_core/Resources/Private/Layouts/ContentElements
+        1911 =  EXT:theme_core/Resources/Private/Layouts/FluidStyledContent
     }
 }
-# Add out custom content elements
+# Overrides of fluid_styled_content
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_core/Configuration/FluidStyledContent/" extensions="setupts">
+# Add our content elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_core/Configuration/ContentElements/" extensions="setupts">
 
 # Extensions

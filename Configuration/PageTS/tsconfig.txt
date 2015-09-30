@@ -1,4 +1,7 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_core/Configuration/BackendLayouts" extensions="pagets">
+# Overrides of fluid_styled_content
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_core/Configuration/FluidStyledContent" extensions="pagets">
+# Add our content elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_core/Configuration/ContentElements" extensions="pagets">
 
 # Just delete the backendlayouts which arn't required
