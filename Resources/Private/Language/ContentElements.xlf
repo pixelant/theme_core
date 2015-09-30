@@ -3,9 +3,23 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_core">
         <header/>
         <body>
+            <trans-unit id="tt_content.palette.imageSize">
+                <source>Size of images</source>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageWidth">
+                <source>Width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageHeight">
+                <source>Height</source>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.settings">
+                <source>Additional settings</source>
+            </trans-unit>
+
             <trans-unit id="tab.contentElements">
                 <source>Content elements</source>
             </trans-unit>
+
             <trans-unit id="slider.title">
                 <source>Slider</source>
             </trans-unit>
@@ -18,6 +32,7 @@
             <trans-unit id="slider.tabs.settings">
                 <source>Settings</source>
             </trans-unit>
+
             <trans-unit id="slider.flexform.sheetGeneral">
                 <source>Additional settings</source>
             </trans-unit>
@@ -49,12 +64,6 @@
             <trans-unit id="bigIconTextButton.flexform.iconClass">
                 <source>Icon</source>
             </trans-unit>
-            <trans-unit id="bigIconTextButton.flexform.wrapperClass">
-                <source>Modifier</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.flexform.wrapperClass_none">
-                <source>None</source>
-            </trans-unit>
 
             <trans-unit id="accordion.title">
                 <source>Accordion</source>
@@ -62,14 +71,11 @@
             <trans-unit id="accordion.description">
                 <source>Accordion, added records will be used as "accordion", and the record inside "accordian" will be rendered as content.</source>
             </trans-unit>
+            <trans-unit id="accordion.records_formlabe">
+                <source>Records to use as "accordions", title is displayed as accordian expand/collapse link, and their child records will be rendered inside the accordion.</source>
+            </trans-unit>
             <trans-unit id="accordion.flexform.sheetGeneral">
                 <source>Additional settings</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.wrapperClass">
-                <source>Modifier</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.wrapperClass_none">
-                <source>None</source>
             </trans-unit>
             <trans-unit id="accordion.flexform.accordionMode">
                 <source>Accordion mode</source>

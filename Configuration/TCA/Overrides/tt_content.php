@@ -1,89 +1,144 @@
 <?php
+defined('TYPO3_MODE') or die();
 
-// Spacer Before Content Elements
-//
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
-  'LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:tab.contentElements',
-  '--div--'
-);
+call_user_func(function() {
 
-// Content Element Slider
-//
-$GLOBALS['TCA']['tt_content']['palettes']['contentElementSlider'] = array(
-  'showitem' => 'header;LLL:EXT:cms/locallang_ttc.xlf:header_formlabel,
-         --linebreak--, subheader;LLL:EXT:cms/locallang_ttc.xlf:subheader_formlabel,
-         --linebreak--, header_link;LLL:EXT:cms/locallang_ttc.xlf:header_link_formlabel',
-  'canNotCollapse' => 1
-);
+    $contentElementLanguageFilePrefix = 'LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:';
+    $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
+    $cmsLanguageFilePrefix = 'LLL:EXT:cms/locallang_ttc.xlf:';
 
-$GLOBALS['TCA']['tt_content']['types']['contentElementSlider'] = array(
-    'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-               header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,
-               --div--;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.tabs.settings,pi_flexform,
-               --div--;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.tabs.slides,image,
-               --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-               --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-               --linebreak--,imagewidth;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imagewidth_formlabel, imageheight;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageheight_formlabel,
-               --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-               --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
-               --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-               --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended'
-);
+    //
+    // CTypes
+    //
+    // "contentElementSlider"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'slider.title',
+            'contentElementSlider',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/slider.gif'
+        ],
+        'login',
+        'after'
+    );
 
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
-  'LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.title',
-  'contentElementSlider',
-  'EXT:theme_core/Resources/Public/Icons/ContentElements/slider.gif'
-);
+    // "bigIconTextButton"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'bigIconTextButton.title',
+            'bigIconTextButton',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/bigIconTextButton.gif'
+        ],
+        'contentElementSlider',
+        'after'
+    );
 
-$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_slider.xml';
+    // "accordion"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'accordion.title',
+            'accordion',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/accordion.gif'
+        ],
+        'bigIconTextButton',
+        'after'
+    );
 
-// Content Element bigIconTextButton
-//
-$GLOBALS['TCA']['tt_content']['palettes']['bigIconTextButton'] = array(
-  'showitem' => 'header;LLL:EXT:cms/locallang_ttc.xlf:header_formlabel,
-         --linebreak--,bodytext;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.bodytext,
-         --linebreak--,subheader;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.buttonText,
-         --linebreak--,header_link;LLL:EXT:cms/locallang_ttc.xlf:header_link_formlabel,
-         --linebreak--,pi_flexform;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.tabs.settings',
 
-  'canNotCollapse' => 1
-);
+    // The "divider" these content elements
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'tab.contentElements',
+            '--div--',
+            NULL
+        ],
+        'login',
+        'after'
+    );
 
-$GLOBALS['TCA']['tt_content']['types']['bigIconTextButton'] = array(
-    'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;bigIconTextButton,'
-);
+    //
+    // Palettes
+    //
+    // "imageSize"
+    $GLOBALS['TCA']['tt_content']['palettes']['imageSize'] = [
+        'showitem' => '
+            imagewidth;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageWidth,
+            imageheight;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageHeight,
+        '
+    ];
 
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
-  'LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.title',
-  'bigIconTextButton',
-  'EXT:theme_core/Resources/Public/Icons/ContentElements/bigIconTextButton.gif'
-);
+    //
+    // Types
+    //
+    // "contentElementSlider"
+    $GLOBALS['TCA']['tt_content']['types']['contentElementSlider'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+            --div--;' . $contentElementLanguageFilePrefix . 'slider.tabs.slides,image,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
 
-$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,bigIconTextButton'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_bigIconTextButton.xml';
+    // "contentElementSlider"
+    $GLOBALS['TCA']['tt_content']['types']['bigIconTextButton'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.buttonText,
+                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'slider.tabs.settings,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
 
-// Content Element Accordion
-//
-$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'][] = array(
-  'LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:accordion.title',
-  'accordion',
-  'EXT:theme_core/Resources/Public/Icons/ContentElements/accordion.gif'
-);
+    // "accordion"
+    $GLOBALS['TCA']['tt_content']['types']['accordion'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.headers;headers,
+                records;' . $contentElementLanguageFilePrefix . 'accordion.records_formlabe,
+                rowDescription,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
 
-$GLOBALS['TCA']['tt_content']['types']['accordion'] = array(
-    'showitem' => '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
-                    header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.shortcut_formlabel,rowDescription,records;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:records_formlabel,
-                    --div--;LLL:EXT:theme_core/Resources/Private/Language/ContentElements.xlf:slider.tabs.settings,pi_flexform,
-                    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
-                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
-                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.visibility;visibility,
-                    --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
-                    --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,
-                    --div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category,categories'
-);
+    //
+    // Flexforms
+    //
+    // "contentElementSlider"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,bigIconTextButton'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_bigIconTextButton.xml';
 
-$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_accordion.xml';
+    // "accordion"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_accordion.xml';
 
-?>
+});
+
