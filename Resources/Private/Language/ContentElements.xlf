@@ -65,6 +65,28 @@
                 <source>Icon</source>
             </trans-unit>
 
+            <trans-unit id="iconTextButton.title">
+                <source>Icon,Text and Link</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.description">
+                <source>Big icon, header, text and link</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.buttonText">
+                <source>Button text</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.flexform.iconClass">
+                <source>Icon</source>
+            </trans-unit>
+
             <trans-unit id="accordion.title">
                 <source>Accordion</source>
             </trans-unit>

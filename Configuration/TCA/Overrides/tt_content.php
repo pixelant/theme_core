@@ -10,6 +10,19 @@ call_user_func(function() {
     //
     // CTypes
     //
+    // "accordion"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'accordion.title',
+            'accordion',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/accordion.gif'
+        ],
+        'login',
+        'after'
+    );
+
     // "contentElementSlider"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -19,7 +32,7 @@ call_user_func(function() {
             'contentElementSlider',
             'EXT:theme_core/Resources/Public/Icons/ContentElements/slider.gif'
         ],
-        'login',
+        'accordion',
         'after'
     );
 
@@ -36,19 +49,18 @@ call_user_func(function() {
         'after'
     );
 
-    // "accordion"
+    // "iconTextButton"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
         [
-            $contentElementLanguageFilePrefix . 'accordion.title',
-            'accordion',
-            'EXT:theme_core/Resources/Public/Icons/ContentElements/accordion.gif'
+            $contentElementLanguageFilePrefix . 'iconTextButton.title',
+            'iconTextButton',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/iconTextButton.gif'
         ],
         'bigIconTextButton',
         'after'
     );
-
 
     // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -94,13 +106,32 @@ call_user_func(function() {
         '
     ];
 
-    // "contentElementSlider"
+    // "bigIconTextButton"
     $GLOBALS['TCA']['tt_content']['types']['bigIconTextButton'] = [
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $cmsLanguageFilePrefix . 'header_formlabel,
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.buttonText,
+                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'slider.tabs.settings,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "contentElementSlider"
+    $GLOBALS['TCA']['tt_content']['types']['iconTextButton'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'iconTextButton.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'iconTextButton.buttonText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'slider.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
@@ -136,6 +167,9 @@ call_user_func(function() {
     //
     // "contentElementSlider"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,bigIconTextButton'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_bigIconTextButton.xml';
+
+    // "iconTextButton"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,iconTextButton'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_iconTextButton.xml';
 
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_core/Configuration/FlexForms/flexform_accordion.xml';
