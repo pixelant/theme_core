@@ -66,10 +66,10 @@
             </trans-unit>
 
             <trans-unit id="iconTextButton.title">
-                <source>Icon,Text and Link</source>
+                <source>Icon,Text and Button</source>
             </trans-unit>
             <trans-unit id="iconTextButton.description">
-                <source>Big icon, header, text and link</source>
+                <source>Icon,Text and Button</source>
             </trans-unit>
             <trans-unit id="iconTextButton.buttonText">
                 <source>Button text</source>
@@ -85,6 +85,28 @@
             </trans-unit>
             <trans-unit id="iconTextButton.flexform.iconClass">
                 <source>Icon</source>
+            </trans-unit>
+
+            <trans-unit id="imageTextLink.title">
+                <source>Image text and link</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.description">
+                <source>Image text and link</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.linkText">
+                <source>Link text</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.tabs.media">
+                <source>Media</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.sheetGeneral">
+                <source>Additional settings</source>
             </trans-unit>
 
             <trans-unit id="accordion.title">
