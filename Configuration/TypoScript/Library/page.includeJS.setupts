@@ -14,18 +14,6 @@ page {
 			disableCompression = 1
 			excludeFromConcatenation = 1
 		}
-        bootstrap_collapse = fileadmin/example_content/temp/collapse.js
-        bootstrap_collapse {
-            external = 0
-            disableCompression = 1
-            excludeFromConcatenation = 1
-        }
-        bootstrap_tab = fileadmin/example_content/temp/tab.js
-        bootstrap_tab {
-            external = 0
-            disableCompression = 1
-            excludeFromConcatenation = 1
-        }
 		components = EXT:theme_core/Resources/Public/temp/components.js
 		components {
 			external = 0
