@@ -101,6 +101,19 @@ call_user_func(function() {
         'after'
     );
 
+    // "tabs"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'tabs.title',
+            'tabs',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/tabs.gif'
+        ],
+        'quote',
+        'after'
+    );
+
     // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -255,6 +268,23 @@ call_user_func(function() {
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'quote.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'quote.linkText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "tabs"
+    $GLOBALS['TCA']['tt_content']['types']['tabs'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.headers;headers,
+                records;' . $contentElementLanguageFilePrefix . 'accordion.records_formlabe,
+                rowDescription,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,

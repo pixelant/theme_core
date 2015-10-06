@@ -5,6 +5,11 @@ page {
             excludeFromConcatenation = 1
             disableCompression = 1
         }
+        bootstrap_navs = fileadmin/example_content/temp/navs.less
+        bootstrap_navs {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
         components = EXT:theme_core/Resources/Public/temp/components.css
         components {
             excludeFromConcatenation = 1

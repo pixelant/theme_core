@@ -1,0 +1,23 @@
+tt_content {
+    tabs =< lib.fluidContent
+    tabs {
+        templateName = Tabs
+
+        dataProcessing {
+
+            10 = Pixelant\ExtensionTools\DataProcessing\FlexFormProcessor
+            10 {
+                fieldName = pi_flexform
+                as = settings
+            }
+
+            1910 = Pixelant\ExtensionTools\DataProcessing\LayoutClassProcessor
+            1910 {
+                classMappings {
+                    0 = nav nav-tabs
+                    1 = nav nav-pills
+                }
+            }
+        }
+    }
+}

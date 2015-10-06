@@ -162,6 +162,19 @@
             <trans-unit id="quote.bodytext">
                 <source>Quote</source>
             </trans-unit>
+
+            <trans-unit id="tabs.title">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="tabs.description">
+                <source>Tabs with content</source>
+            </trans-unit>
+            <trans-unit id="tabs.layout.0">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="tabs.layout.1">
+                <source>Pills</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
