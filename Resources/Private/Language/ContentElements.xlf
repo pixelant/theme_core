@@ -12,9 +12,18 @@
             <trans-unit id="tt_content.palette.imageSize.imageHeight">
                 <source>Height</source>
             </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageMaxWidth">
+                <source>Max width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageMaxHeight">
+                <source>Max height</source>
+            </trans-unit>
+
             <trans-unit id="tt_content.tabs.settings">
                 <source>Additional settings</source>
             </trans-unit>
+
+
 
             <trans-unit id="tab.contentElements">
                 <source>Content elements</source>
@@ -28,19 +37,6 @@
             </trans-unit>
             <trans-unit id="slider.tabs.slides">
                 <source>Slides</source>
-            </trans-unit>
-            <trans-unit id="slider.tabs.settings">
-                <source>Settings</source>
-            </trans-unit>
-
-            <trans-unit id="slider.flexform.sheetGeneral">
-                <source>Additional settings</source>
-            </trans-unit>
-            <trans-unit id="slider.flexform.wrapperClass">
-                <source>Modifier</source>
-            </trans-unit>
-            <trans-unit id="slider.flexform.wrapperClass_none">
-                <source>None</source>
             </trans-unit>
 
             <trans-unit id="bigIconTextButton.title">
@@ -138,6 +134,16 @@
             </trans-unit>
             <trans-unit id="accordion.flexform.accordionMode_allOpen">
                 <source>All items are expanded at load.</source>
+            </trans-unit>
+
+            <trans-unit id="logoCarousel.title">
+                <source>Logo Carousel</source>
+            </trans-unit>
+            <trans-unit id="logoCarousel.description">
+                <source>Carousel with images (logos) and optional link</source>
+            </trans-unit>
+            <trans-unit id="logoCarousel.tabs.logos">
+                <source>Logos</source>
             </trans-unit>
         </body>
     </file>

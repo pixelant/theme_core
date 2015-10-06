@@ -75,6 +75,19 @@ call_user_func(function() {
         'after'
     );
 
+    // "logoCarousel"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'logoCarousel.title',
+            'logoCarousel',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/logoCarousel.gif'
+        ],
+        'imageTextLink',
+        'after'
+    );
+
     // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -96,6 +109,14 @@ call_user_func(function() {
         'showitem' => '
             imagewidth;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageWidth,
             imageheight;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageHeight,
+        '
+    ];
+
+    // "imageMaxSize"
+    $GLOBALS['TCA']['tt_content']['palettes']['imageMaxSize'] = [
+        'showitem' => '
+            imagewidth;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageMaxWidth,
+            imageheight;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageMaxHeight,
         '
     ];
 
@@ -127,7 +148,7 @@ call_user_func(function() {
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.buttonText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'slider.tabs.settings,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
@@ -146,7 +167,7 @@ call_user_func(function() {
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'iconTextButton.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'iconTextButton.buttonText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'slider.tabs.settings,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
@@ -183,11 +204,28 @@ call_user_func(function() {
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'iconTextButton.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'iconTextButton.linkText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'slider.tabs.settings,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'imageTextLink.tabs.media,media,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "logoCarousel"
+    $GLOBALS['TCA']['tt_content']['types']['logoCarousel'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.headers;headers,
+            --div--;' . $contentElementLanguageFilePrefix . 'logoCarousel.tabs.logos,image,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
