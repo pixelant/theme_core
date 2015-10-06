@@ -23,8 +23,6 @@
                 <source>Additional settings</source>
             </trans-unit>
 
-
-
             <trans-unit id="tab.contentElements">
                 <source>Content elements</source>
             </trans-unit>
@@ -144,6 +142,25 @@
             </trans-unit>
             <trans-unit id="logoCarousel.tabs.logos">
                 <source>Logos</source>
+            </trans-unit>
+
+            <trans-unit id="quote.title">
+                <source>Quote</source>
+            </trans-unit>
+            <trans-unit id="quote.description">
+                <source>Quote with optional footer and link</source>
+            </trans-unit>
+            <trans-unit id="quote.linkText">
+                <source>Link text</source>
+            </trans-unit>
+            <trans-unit id="quote.header">
+                <source>Name, Title</source>
+            </trans-unit>
+            <trans-unit id="quote.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="quote.bodytext">
+                <source>Quote</source>
             </trans-unit>
         </body>
     </file>

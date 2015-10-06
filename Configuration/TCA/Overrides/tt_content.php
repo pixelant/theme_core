@@ -88,6 +88,19 @@ call_user_func(function() {
         'after'
     );
 
+    // "quote"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'quote.title',
+            'quote',
+            'EXT:theme_core/Resources/Public/Icons/ContentElements/quote.gif'
+        ],
+        'logoCarousel',
+        'after'
+    );
+
     // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -226,6 +239,24 @@ call_user_func(function() {
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "quote"
+    $GLOBALS['TCA']['tt_content']['types']['quote'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $contentElementLanguageFilePrefix . 'quote.header,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'quote.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'quote.linkText,
+                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
